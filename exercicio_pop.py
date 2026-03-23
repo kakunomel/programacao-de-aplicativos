@@ -1,6 +1,6 @@
-texto = input("Digite um texto")
-cor = input("Digite uma core")
-imagem = input("Insira uma imagem")
+texto = input("Digite um texto ")
+cor = input("Digite uma cor ")
+imagem = input("Descreva uma imagem ")
 
 acoes = [texto , cor , imagem]
 print("Lista das seguintes acões:", acoes)
