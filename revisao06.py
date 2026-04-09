@@ -1,11 +1,11 @@
-valorA = float(input("Digite um valor: "))
-valorB = float(input("Digite um valor: "))
+valorA = float(input("Digite o valor A: "))
+valorB = float(input("Digite o valor B: "))
+c = 0 
 
 print("\nObserve os seguintes valores:")
 print("A = ",valorA)
 print("B = ",valorB)
 
-c = 0 
 c = valorA
 valorA = valorB
 valorB = c 
