@@ -1,10 +1,11 @@
 print("\n------FILTRO APROVADOS------")
 
 alunos = ["Melissa", "Paulo", "Maria", "Arthur", "Eduarda"]
-notas = [80, 70, 100, 99, 55]
+notas = [80, 70, 59, 90, 50]
 
 for nota in notas:
     if nota >= 60:
         indice = notas.index(nota)
-        print(alunos[indice])
-print(f"nova atual: {alunos}")
+        print("Alunos aprovados:" ,alunos[indice])
+print(f"Lista dos alunos: {alunos}")
+
