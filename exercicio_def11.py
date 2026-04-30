@@ -5,9 +5,10 @@ imposto_percentual = int(input("Digite o valor do imposto: "))
 cupom_desconto = int(input("Digite o valor do cupom: "))
 
 def calcular_preco_final(valor_base, imposto_percentual, cupom_desconto):
-    soma = valor_base + imposto_percentual
-    subtrcao = soma - cupom_desconto
+    subtracao1 = valor_base - imposto_percentual
+    valor_total = subtracao1 - cupom_desconto
     if cupom_desconto > valor_base:
-        print(0)
+        return  0
 
-#CORRIGIR
+resultado = calcular_preco_final(valor_base, imposto_percentual, cupom_desconto)
+print(resultado)
