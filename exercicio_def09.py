@@ -15,4 +15,4 @@ def somar_carrinho (lista_valor_compra):
         return desconto2
 
 total = somar_carrinho(lista_valor_compra)
-print("Seu valor com descoonto ficou:" , total)
+print("Seu valor com desconto ficou:" , total)
