@@ -5,4 +5,3 @@ if usuario  % 2 == 0 and vagas[usuario] == "Livre":
     print(f"Vaga {usuario} autorizada para estacionar.") 
 else:
     print(f"Vaga {usuario} indisponível ou fora das regras.")
-    

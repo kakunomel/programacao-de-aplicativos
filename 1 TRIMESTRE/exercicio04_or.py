@@ -9,4 +9,3 @@ frete = 50.00
 valor_total = valor_compra + frete
 if cliente == "N" or valor_compra < 500.00:
     print("O valor total da compra ficou:" ,  valor_total)
-

@@ -6,4 +6,4 @@ for temperatura in temperaturas:
     if temperatura > 30.0:
         print(f"ALERTA: TEMPERATURA CRÍTICA. {temperatura}°C")
     else:
-        print(f"Temperatura Normal. {temperatura}°C")  
+        print(f"Temperatura Normal. {temperatura}°C")
