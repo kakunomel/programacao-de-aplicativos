@@ -12,4 +12,4 @@ def calcular_area (largura,comprimento,contador):
         print(f"A área do terreno é: {area}")
         contador += 1
  
-calcular_area(largura,comprimento,contador) 
+calcular_area(largura,comprimento,contador)
