@@ -14,4 +14,4 @@ for s in salarios:
         sobra = s - imposto
         percentual = "20%"
 
-    print(f"\nO salário {s} foi cobrado {percentual} de imposto")
+    print(f"\nO salário {s} foi cobrado {percentual} de imposto") 

@@ -7,4 +7,4 @@ print("Lista atualizada" , fila)
 fila.insert(0,"Zuleica")
 print("Lista atualizada novamente" , fila)
 
-print(len(fila))
+print(len(fila)) 

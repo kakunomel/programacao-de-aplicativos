@@ -5,4 +5,4 @@ if temperatura >= 80:
 elif temperatura >= 50 < 80:
     print ("Alerta: Ventoinhas ligadas no máximo!")
 elif temperatura < 50:
-    print ("Temperatura estável. Sistema operando normalmente")
+    print ("Temperatura estável. Sistema operando normalmente") 

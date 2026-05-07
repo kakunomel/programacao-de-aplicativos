@@ -23,4 +23,3 @@ while opcao != "3":
             print(f"Saque realizado! Novo saldo: R${saldo}")
         else:
             print("Operação negada! Saldo insuficiente.")
-    

@@ -10,4 +10,4 @@ if peso < 5 and (codigo_pacote % 10 == 0):
 elif peso > 50:
     print(f"Pacote {codigo_pacote}: CARGA PESADA")
 else:
-    print("INFORMAÇÕES INVÁLIDAS!")
+    print("INFORMAÇÕES INVÁLIDAS!") 

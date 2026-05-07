@@ -7,4 +7,4 @@ texto = "Primeira aula pratica" # variável string
 print(numero)
 print(numero_quebrado)
 print(a_caneta_esta_em_cima_da_mesa)
-print(texto)
+print(texto) 

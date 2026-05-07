@@ -13,4 +13,4 @@ while posicao < len(nomes):
         nomes[posicao] = novo 
 
     posicao = posicao + 1 
-print("Lista atualizada:", nomes)
+print("Lista atualizada:", nomes) 

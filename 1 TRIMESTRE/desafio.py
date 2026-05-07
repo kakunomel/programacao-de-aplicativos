@@ -21,4 +21,4 @@ valor_final = total - desconto
 print("Nome do cliente:" , nome_cliente)
 print("Valor total da compra:" , valor_total)
 print("Valor do desconto:" , cupom)
-print("Valor final a pagar:" , valor_final)
+print("Valor final a pagar:" , valor_final) 

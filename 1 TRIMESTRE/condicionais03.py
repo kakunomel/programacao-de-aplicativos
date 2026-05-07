@@ -6,4 +6,4 @@ if cupom == "DEV10":
     total = valor_da_compra - desconto 
     print ("Novo valor:" , total)
 else: 
-    print ("Cupom inválido. Valor original: R$ " , valor_da_compra)
+    print ("Cupom inválido. Valor original: R$ " , valor_da_compra) 

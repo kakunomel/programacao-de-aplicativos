@@ -21,3 +21,4 @@ if codigo == 999 or autorização == "S":
 else:
     print("ERRO 01: Drone não identificado. Retornando à base.")
 
+ 

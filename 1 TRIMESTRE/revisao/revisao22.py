@@ -6,4 +6,4 @@ conta = (salario *15) /100
 novo_salario = salario + conta
 
 print("\nParabéns, você recebeu um aumento!")
-print(f"Seu novo salário é: {novo_salario}")
+print(f"Seu novo salário é: {novo_salario}") 

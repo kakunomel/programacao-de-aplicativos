@@ -10,4 +10,4 @@ print ("Seu nível é: " , nível)
 
 print ("A quantidade de ouro desejada é: " , quantidade_de_ouro)
 
-print ("Seu status de vida é: " , status_de_vida)
+print ("Seu status de vida é: " , status_de_vida) 

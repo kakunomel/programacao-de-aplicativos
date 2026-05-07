@@ -11,4 +11,4 @@ elif garrafas % 100 == 0:
     print("QUALIDADE: Retire a amostra para teste!")
 
 else:
-    print(f"Produção em dia. Garrafa número {garrafas} processada.")
+    print(f"Produção em dia. Garrafa número {garrafas} processada.") 

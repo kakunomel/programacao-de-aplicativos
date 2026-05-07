@@ -6,4 +6,4 @@ print("Lista dos preços: ", precos)
 
 for preco in precos:
     if preco < 50:
-        print(f"Preço menor que R$50: {preco}")
+        print(f"Preço menor que R$50: {preco}") 

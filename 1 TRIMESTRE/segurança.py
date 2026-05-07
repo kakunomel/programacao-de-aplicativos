@@ -8,4 +8,4 @@ if curso == "S":
     else:
         print("Aguarde o instrutor para ligar a máquina.")
 else:
-    print("Acesso negado! Faça o treinamento primeiro.")
+    print("Acesso negado! Faça o treinamento primeiro.") 

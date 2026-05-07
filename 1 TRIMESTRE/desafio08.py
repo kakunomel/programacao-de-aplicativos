@@ -35,4 +35,4 @@ print("                                                    ")
 del livros_disponiveis[0:1]
 print("RELATÓRIO FINAL")
 print(f"Livros disponíveis: {livros_disponiveis}")
-print(f"Livros emprestados: {livros_emprestados}")
+print(f"Livros emprestados: {livros_emprestados}") 

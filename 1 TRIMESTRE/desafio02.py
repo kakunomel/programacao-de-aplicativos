@@ -6,4 +6,4 @@ equipamento_completo = input("EPI completo? Digite S ou N: ")
 if (cargo == "Engenheiro" or cargo == "Tecnico") and (codigo == 1234 or botao_pressionado == "S") and equipamento_completo == "S":
     print("ACESSO LIBERADO!")
 else:
-    print("ACESSO NEGADO: RISCO DE SEGURANÇA!")
+    print("ACESSO NEGADO: RISCO DE SEGURANÇA!") 

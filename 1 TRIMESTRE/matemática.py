@@ -12,4 +12,4 @@ divisao = valor1 / valor2
 print ("O resultado da soma é" , soma)
 print ("O resultado da subtracao é" , subtracao)
 print ("O resultado da multiplicacao é" , multiplicacao)
-print ("O resultado da divisao é" , divisao)
+print ("O resultado da divisao é" , divisao) 

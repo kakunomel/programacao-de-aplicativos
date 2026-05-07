@@ -13,4 +13,4 @@ for valor in valores:
       
 
 print(f"Números pares: {pares}")
-print(f"Números ímpares: {impares}")
+print(f"Números ímpares: {impares}") 

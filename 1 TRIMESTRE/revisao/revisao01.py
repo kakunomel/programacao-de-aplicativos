@@ -7,4 +7,4 @@ nota3 = float(input("Digite a nota 3: "))
 soma = nota1 + nota2 + nota3
 media = soma / 3 
 
-print(f"Sua média de notas é: {media}")
+print(f"Sua média de notas é: {media}") 

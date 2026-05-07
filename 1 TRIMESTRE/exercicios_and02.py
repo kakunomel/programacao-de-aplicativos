@@ -8,4 +8,4 @@ elif media < 7.0 and presenca < 75:
 elif media >= 7.0 and presenca < 75:
     print("Reprovado. Verifique sua nota ou frequência.")
 elif media < 7.0 and presenca >= 75:
-    print("Reprovado. Verifique sua nota ou frequência.")
+    print("Reprovado. Verifique sua nota ou frequência.") 

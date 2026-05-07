@@ -15,4 +15,3 @@ print(numeros.pop())
 print(numeros.pop())
 print(numeros.pop())
 print(numeros.pop())
-

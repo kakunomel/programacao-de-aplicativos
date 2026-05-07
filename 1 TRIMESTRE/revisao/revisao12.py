@@ -7,4 +7,4 @@ numeros_dobrados = []
 for numero in numeros:
     dobro = (numero * 2)
     numeros_dobrados.append(dobro)
-    print(f"Observe os números atualizados: {numeros_dobrados}")
+    print(f"Observe os números atualizados: {numeros_dobrados}") 

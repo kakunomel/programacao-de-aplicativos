@@ -9,4 +9,4 @@ if comprimento == "S":
     else:
         print("REPROVADO: Problema na largura.")
 else:
-    print("REPROVADO: Problema no comprimento.")
+    print("REPROVADO: Problema no comprimento.") 

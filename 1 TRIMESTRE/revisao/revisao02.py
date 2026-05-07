@@ -3,4 +3,4 @@ soma = 0
 
 for preco in precos:
     soma += preco
-    print(soma)
+    print(soma) 

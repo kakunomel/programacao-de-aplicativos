@@ -13,4 +13,4 @@ umidade = float(input("Digite a umidade da estufa "))
 if umidade <= 40:
     print("AÇÃO: LIGAR A IRRIGAÇÃO!")
 else:
-    print("AÇÃO: LIGAR APENAS VENTILADORES.")
+    print("AÇÃO: LIGAR APENAS VENTILADORES.") 

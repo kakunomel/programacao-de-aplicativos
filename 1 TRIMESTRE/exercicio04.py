@@ -7,4 +7,4 @@ multiplicação = preço_unitário * quantidade_de_produto
 print ("Nome do produto: " , nome_do_produto)
 print ("Quantidade adquirida: " , quantidade_de_produto)
 print ("Valor unitário: " , preço_unitário)
-print ("Valor total a ser pago é: " , multiplicação)
+print ("Valor total a ser pago é: " , multiplicação) 

@@ -7,4 +7,4 @@ while fila:
     cliente = fila.pop(0)
     print(f"{cliente} foi atendido")
 
-print("\n---------------------------------")
+print("\n---------------------------------") 

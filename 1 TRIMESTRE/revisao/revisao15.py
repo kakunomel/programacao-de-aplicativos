@@ -8,4 +8,3 @@ for nota in notas:
         indice = notas.index(nota)
         print("Alunos aprovados:" ,alunos[indice])
 print(f"Lista dos alunos: {alunos}")
-

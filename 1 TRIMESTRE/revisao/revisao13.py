@@ -15,4 +15,4 @@ while tentativas < 3 and acertou == False:
         tentativas = tentativas + 1
 
 if acertou == False:
-    print("Acesso bloqueado")
+    print("Acesso bloqueado") 

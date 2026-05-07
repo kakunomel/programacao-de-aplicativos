@@ -15,4 +15,4 @@ if item not in ferramentas:
         ferramenta = input("Digite a ferramenta que deseja adicionar: ")
         ferramentas.append(ferramenta)
         controle = input("Deseja adicionar a ferramenta a lista?: ")
-print(ferramentas)
+print(ferramentas) 

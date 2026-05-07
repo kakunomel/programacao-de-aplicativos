@@ -8,4 +8,4 @@ elif idade < 18 and saldo <50.0:
 elif idade >= 18 and saldo < 50.0:
     print("Infelizmente você não cumpre os requisitos de entrada.")
 elif idade < 18 and saldo >= 50.0:
-    print("Infelizmente você não cumpre os requisitos de entrada.")
+    print("Infelizmente você não cumpre os requisitos de entrada.") 

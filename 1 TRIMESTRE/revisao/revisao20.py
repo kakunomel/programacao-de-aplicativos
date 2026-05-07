@@ -10,4 +10,4 @@ while adicionar != "sair":
         produtos.append(adicionar)
       
 print("\nProdutos adicionados ao carrinho:")
-print(produtos)
+print(produtos) 

@@ -10,4 +10,4 @@ concluidos.append(pendentes[0])
 pendentes.pop(0)
 
 print("Pendentes: ", pendentes)
-print("Concluídos: ", concluidos)
+print("Concluídos: ", concluidos) 

@@ -5,4 +5,4 @@ precos[1] = 55.50
 print("Preços atualizados" , precos)
 
 precos[3] = 120.00/2
-print(f"Os novos preços são {precos}")
+print(f"Os novos preços são {precos}") 

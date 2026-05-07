@@ -9,4 +9,4 @@ if calculo > 25:
     print("Você está com sobrepeso!")
 else:
     print("\nSeu IMC é " , calculo)
-    print("Seu peso está normal!")
+    print("Seu peso está normal!") 

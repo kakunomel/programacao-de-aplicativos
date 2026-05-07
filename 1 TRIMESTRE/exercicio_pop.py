@@ -6,4 +6,4 @@ acoes = [texto , cor , imagem]
 print("Lista das seguintes acões:", acoes)
 
 acoes.pop(2)
-print(f"Lista atual:{acoes}")
+print(f"Lista atual:{acoes}") 

@@ -9,4 +9,4 @@ while nome != "fim":
             print("Lista VIP: " , lista_vip)
         else:
             print("Apena nomes com A são permitidos no VIP")
-print("Encerrando programa...")
+print("Encerrando programa...") 

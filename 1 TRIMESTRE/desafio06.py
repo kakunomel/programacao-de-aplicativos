@@ -18,4 +18,4 @@ if idade < 0 or idade > 120:
 
 lista = [nome , idade , telefone , carteira]
 
-print(f"Olá {nome}, descobrimos que você tem {idade} anos, rackeamos seu telefone {telefone} e será que você tem carteira? {carteira}.")
+print(f"Olá {nome}, descobrimos que você tem {idade} anos, rackeamos seu telefone {telefone} e será que você tem carteira? {carteira}.") 

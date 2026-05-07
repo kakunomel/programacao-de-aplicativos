@@ -5,4 +5,4 @@ if salario >= 10.000:
 elif salario >= 5.000:
     print("Classe Média")
 elif salario < 5.000:
-    print("Classe Baixa")
+    print("Classe Baixa") 

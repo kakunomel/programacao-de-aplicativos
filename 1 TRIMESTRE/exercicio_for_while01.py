@@ -8,4 +8,4 @@ for numero in numeros:
     soma += numero
     print(soma)
 
-print("-------------------------------")
+print("-------------------------------") 
