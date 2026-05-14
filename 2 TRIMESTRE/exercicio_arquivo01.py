@@ -1,4 +1,4 @@
-print("\n-----PLANEJADOR DE 'DESTINO DOS SONHOS'-----\n")
+print("\n-----PLANEJADOR DE VIAGENS-----\n")
 
 usuario = ""
 
@@ -19,7 +19,7 @@ def listar_destinos():
         
         i = 0
         for destino in destinos:
-            print(f"{i} - {destino.strip()}")
+            print(f"\n{i} - {destino.strip()}")
             i += 1
 
 
@@ -38,18 +38,18 @@ def editar_destinos():
     print("Destino Atualizado!")
 
 
-# def remover_destinos():
-#     listar_destinos()
-#     posicao = int(input("\nDigite a posição do destino que deseja remover: "))
+def remover_destinos():
+    listar_destinos()
+    posicao = int(input("\nDigite a posição do destino que deseja remover: "))
 
-#     with open('viagens.txt','r') as arquivo:
-#         linhas = arquivo.readlines()
+    with open('viagens.txt','r') as arquivo:
+        linhas = arquivo.readlines()
 
-#     del linhas[posicao]
+    del linhas[posicao]
 
-#     with open('viagen.txt','w') as arquivo:
-#         arquivo.writelines(linhas)
-#     print("Destino Removido!") 
+    with open('viagens.txt','w') as arquivo:
+        arquivo.writelines(linhas)
+    print("Destino Removido!") 
 
 
 while usuario != 5:
@@ -73,5 +73,5 @@ while usuario != 5:
 
     elif usuario == 4:
         remover_destinos()
-print("Ecerrando programa...")
+print("\nEcerrando programa...")
     
