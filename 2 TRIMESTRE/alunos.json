@@ -1,0 +1,16 @@
+[
+    {
+        "nome": "Milena",
+        "telefone": "9999999",
+        "turma": "Segundo",
+        "idade": 17,
+        "cpf": "12345678"
+    },
+    {
+        "nome": "Maria",
+        "telefone": "12345678",
+        "turma": "Segundo",
+        "idade": 16,
+        "cpf": "999999999"
+    }
+]
