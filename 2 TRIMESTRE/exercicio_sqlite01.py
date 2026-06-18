@@ -15,15 +15,17 @@ def cadastrar():
                     turma_aluno TEXT,
                     idade_aluno INTEGER,
                     cpf_aluno TEXT UNIQUE NOT NULL,
-                    professor_id INTEGER
+                    professor_id INTEGER,
+                    FOREIGN KEY (professor_id) REFERENCES professores(id)
                     )''')
 
-    print("----CADASTRO----")
+    print("\n----CADASTRO----")
     nome_aluno = input("Digite seu nome: ")
     telefone_aluno = input("Digite seu telefone: ")
     turma_aluno = input("Digite sua turma: ")
     idade_aluno = int(input("Digite sua idade: "))
     cpf_aluno = input("Digite seu CPF: ")
+    professor_id = int(input("Digite o ID do professor: "))
     print("-" * 50)
 
     comando_inserir = (f''' 
@@ -131,4 +133,4 @@ while opcao != 5:
         excluir()
 
 conexao.close()
-print("\nENCERRANDO PROGRAMA...")     
+print("\nENCERRANDO PROGRAMA...")
