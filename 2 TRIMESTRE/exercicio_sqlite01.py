@@ -15,8 +15,9 @@ def cadastrar():
                     turma_aluno TEXT,
                     idade_aluno INTEGER,
                     cpf_aluno TEXT UNIQUE NOT NULL,
-                    professor_id INTEGER,
-                    FOREIGN KEY (professor_id) REFERENCES professores(id)
+                    endereco_aluno TEXT,
+                    cidade_aluno TEXT,
+                    estado_aluno TEXT
                     )''')
 
     print("\n----CADASTRO----")
@@ -25,12 +26,14 @@ def cadastrar():
     turma_aluno = input("Digite sua turma: ")
     idade_aluno = int(input("Digite sua idade: "))
     cpf_aluno = input("Digite seu CPF: ")
-    professor_id = int(input("Digite o ID do professor: "))
-    print("-" * 50)
+    endereco_aluno = input("Digite seu endereço: ")
+    cidade_aluno = input("Digite sua cidade: ")
+    estado_aluno = input("Digite seu estado: ")
+    print("-" * 40)
 
     comando_inserir = (f''' 
-                        INSERT INTO alunos (nome_aluno, telefone_aluno, turma_aluno, idade_aluno, cpf_aluno, professor_id)
-                        VALUES ('{nome_aluno}' , '{telefone_aluno}' , '{turma_aluno}' , '{idade_aluno}' , '{cpf_aluno}' , '{professor_id}')''')
+                        INSERT INTO alunos (nome_aluno, telefone_aluno, turma_aluno, idade_aluno, cpf_aluno, endereco_aluno, cidade_aluno, estado_aluno)
+                        VALUES ('{nome_aluno}' , '{telefone_aluno}' , '{turma_aluno}' , '{idade_aluno}' , '{cpf_aluno}' , '{endereco_aluno}' , '{cidade_aluno}' , '{estado_aluno}')''')
 
     cursor.execute(comando_inserir)
     conexao.commit()
@@ -56,6 +59,9 @@ def listar():
             print(f"Turma: {aluno[3]}")
             print(f"Idade: {aluno[4]}")
             print(f"CPF: {aluno[5]}")
+            print(f"Endereço: {aluno[6]}")
+            print(f"Cidade: {aluno[7]}")
+            print(f"Estado: {aluno[8]}")
             print("-" * 50)
 
 
@@ -70,6 +76,9 @@ def alterar():
     nova_turma = input("Digite a nova turma: ")
     nova_idade = int(input("Digite a nova idade: "))
     novo_cpf = input("Digite o novo CPF: ")
+    novo_endereco = input("Digite o novo endereço: ")
+    nova_cidade = input("Digite a nova cidade: ")
+    novo_estado = input("Digite o novo estado: ")
 
     atualizar = f'''
     UPDATE Alunos
@@ -77,7 +86,10 @@ def alterar():
         telefone_aluno = '{novo_telefone}',
         turma_aluno = '{nova_turma}',
         idade_aluno = '{nova_idade}',
-        cpf_aluno = '{novo_cpf}'
+        cpf_aluno = '{novo_cpf}',
+        endereco_aluno = '{novo_endereco}',
+        cidade_aluno = '{nova_cidade}',
+        estado_aluno = '{novo_estado}',
     WHERE id = {id_aluno}'''
 
     cursor.execute(atualizar)

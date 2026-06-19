@@ -16,7 +16,8 @@ def cadastrar():
                     idade_professor INTEGER,
                     cpf_professor TEXT UNIQUE NOT NULL,
                     salario_professor TEXT,
-                    escola_professor TEXT
+                    escola_professor TEXT,
+                    endereco_professor TEXT
                     )''')
 
     print("\n---- CADASTRO ----")
@@ -27,14 +28,15 @@ def cadastrar():
     cpf_professor = input("Digite seu CPF: ")
     salario_professor = input("Digite seu salário: ")
     nome_escola = input("Digite o nome da escola que você da aula: ")
+    endereco_professor = input("Digite seu endereço: ")
     print("-" * 50)
 
 
     inserir = (f'''
                 INSERT INTO professores (nome_professor, telefone_professor, materia_professor,
-                idade_professor, cpf_professor, salario_professor, escola_professor)
+                idade_professor, cpf_professor, salario_professor, escola_professor, endereco_professor)
                 VALUES ('{nome_professor}' , '{telefone_professor}' , '{materia_professor}' , '{idade_professor}' ,
-                '{cpf_professor}' , '{salario_professor}' , '{nome_escola}')''')
+                '{cpf_professor}' , '{salario_professor}' , '{nome_escola}' , '{endereco_professor}')''')
 
 
     cursor.execute(inserir)
@@ -63,6 +65,7 @@ def listar():
             print(f"CPF: {prof[5]}")
             print(f"Salário: {prof[6]}")
             print(f"Escola: {prof[7]}")
+            print(f'Endereço: {prof[8]}')
             print("-" * 50)
 
 
@@ -79,6 +82,7 @@ def alterar():
     novo_cpf = input("Digite o novo CPF: ")
     novo_salario = input("Digite o novo salário: ")
     nova_escola = input("Digite nova escola: ")
+    novo_endereco = input("Digite o novo endereço: ")
     
 
     atualizar = f'''
@@ -89,7 +93,8 @@ def alterar():
         idade_professor = '{nova_idade}',
         cpf_professor = '{novo_cpf}',
         salario_professor = '{novo_salario}',
-        escola_professor = '{nova_escola}'
+        escola_professor = '{nova_escola}',
+        endereco_professor = '{novo_endereco}',
     WHERE id = {id_professor}'''
 
     cursor.execute(atualizar)
