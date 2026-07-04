@@ -6,7 +6,8 @@ def buscar_professor(id_prof):
 
     #O PYTHON RECLAMA DE "INCORRECT NUMBER OF BINDINGS".
     #ESTAMOS PASSANDO A VARIÁVEL, POR QUE OCORRE O ERRO?
-    cursor.execute("SELECT nome FROM professores WHERE id = ?", (id_prof))
-    resultado = cursor. fetchone()
+    cursor.execute("SELECT nome FROM professores WHERE id = ?", (id_prof,))
+    resultado = cursor.fetchone()
     print(resultado)
     conexao.close()
+    #É OBRIGATÓRIO COLOCAR A VÍRGULA DEPOIS DO ELEMENTO

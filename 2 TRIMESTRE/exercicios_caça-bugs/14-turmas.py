@@ -9,9 +9,11 @@ def criar_tabela_turma():
                     CREATE TABLE IF NOT EXISTS turmas(
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     nome_turma TEXT,
-                    id_serie,
+                    id_serie INTEGER,
                     FOREN KEY (id_serie) REFERENCES series(id)
                     )''')
 
     conexao.commit()
     conexao.close()
+
+    #A COLUNA ID_SEIE NÃO TINHA UM TIPO DEFINIDO PARA GUARDAR O ID DA SÉRIE

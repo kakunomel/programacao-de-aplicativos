@@ -6,8 +6,14 @@ def listar_alunos_e_turmas():
 
     #O RELATÓRIO RODA, MAS REPETE OS DADOS ERRONEAMENTE EM FORMATO DE MATRIZ CRUZADA,
     #PORQUE FALTA DEFINIR A REGRA DE COLAGEM (VÍNCULO). CONSERTE O COMANDO SQL:
-    cursor.execute("SELECT alunos.nome, turmas.nome_turma FROM alunos INTER JOIN turmas")
+    cursor.execute('''
+        SELECT alunos.nome, turmas.nome_turma
+        FROM alunos 
+        INTER JOIN turmas
+        ON alunos.id_turma = turmas.id ''')
 
     for linha in cursor.fetchall():
         print(f"Aluno{linha[0]} | Turma: {linha[1]}")
     conexao.close()
+
+    #FALTAVA O 'ON' PARA LIGAR OS ALUNOS E AS TURMAS CORRETAMENTE

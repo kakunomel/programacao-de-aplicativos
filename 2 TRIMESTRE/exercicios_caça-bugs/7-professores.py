@@ -10,4 +10,6 @@ def cadastrar_professor(nome, cpf):
                     CREATE TABLE IF NOT EXISTST professores(
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     nome TEXT,
-                    cpf TEXT) ''')
+                    cpf UNIQUE TEXT) ''')
+    #DAVA ERRO PORQUE O CPF NÃO ESTAVA 'UNIQUE' E ELE SÓ PODE SER ÚNICO
+    #ENTÃO PARA NÃO DAR ERRO TEM QUE COLOCAR O 'UNIQUE'

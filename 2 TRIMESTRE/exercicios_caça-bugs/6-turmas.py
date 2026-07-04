@@ -4,10 +4,13 @@ def cadastrar_turma(nome, id_serie, id_prof):
     conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
     cursor.execute("PRAGMA foreign_keys = ON;")
+    try:
+        cursor.execute("INSERT INTO turmas (nome_turma,id_serie,id_professor) VALUES (?,?,?)", (nome , id_serie , id_prof))
+        conexao.commit()
+    except sqlite3.IntegrityError:
+        print("Professor ou série não existe.")
+    finally:
+        conexao.close()
 
-    #SE O ID_PROF NAO EXISTIR, OCORRE UM INTEGRITYERROR.
-    #SE O ERRO ACONTECER, O QUE OCORRE COM A LINHA CONEXAO.CLOSE()?
-    cursor.execute("INSERT INTO turmas Iome_turma, id_serie, id_professor) VALUES (?, ?, ?)", (nome, id_serie, id_prof))
-    conexao.commit()
-    conexao.close()
-    
+#PODE DAR ERRO PORQUE NÃO EXISTE O ID_PROF, ENÃO COLOCAMOS OS TRY, EXCEPT JUNTO COM O ERRO
+#SE ACONTECER O ERRO TANTO O COMMIT TANTO O CLOSE NÃO É EXECUTADO
