@@ -19,4 +19,3 @@ def criar_tabelas():
     conexao.commit()
     conexao.close()
 
-#ESTAVA DANDO ERRO PORQUE ESTAVA PUXNDO UMA REFERÊNCIA DE UMA TABELA QUE NÃO EXISTE
