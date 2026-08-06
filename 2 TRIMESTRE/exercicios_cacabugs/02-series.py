@@ -2,15 +2,19 @@ import sqlite3
 
 def cadastrar_serie(nome_serie, id_escola):
     conexao = sqlite3.connect('sistema_escola.db')
-    cursor = conexao.cursor
+    cursor = conexao.cursor()
 
     try:
-        cursor.execute("PRAGMA foreign_keys = ON;")
-        cursor.execute("INSERT INTO series(nome_serie, id_escola)VALUES (?, ?)", (nome_serie, id_escola))
+        cursor.execute("INSERT INTO series (nome_serie, id_escola) VALUES (?, ?)",
+        (nome_serie, id_escola))
+
         conexao.commit()
+        print("Série cadastrada com sucesso!")
+
     except sqlite3.IntegrityError:
         print("Erro: Escola inexistente!")
+        
     finally:
         conexao.close()
 
-cadastrar_serie
+cadastrar_serie("2° ano", 1)

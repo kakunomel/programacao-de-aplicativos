@@ -7,15 +7,18 @@ def criar_tabelas():
     cursor.execute('''
                 CREATE TABLE IF NOT EXISTS escolas(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT) ''')
+                nome TEXT NOT NULL)''')
     
     cursor.execute('''
                 CREATE TABLE IF NOT EXISTS series(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome_serie TEXT,
-                id_escola INTERGER,
-                FOREIGN KEY (id_escola)REFERENCES escolas (id)) ''')
+                nome_serie TEXT NOT NULL,
+                id_escola INTEGER,
+                FOREIGN KEY (id_escola) REFERENCES escolas (id))
+                ''')
 
     conexao.commit()
     conexao.close()
+    print("Banco criado com sucesso!")
 
+criar_tabelas()

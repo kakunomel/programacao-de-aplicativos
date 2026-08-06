@@ -2,12 +2,22 @@ import sqlite3
 
 def buscar_professor(id_prof):
     conexao = sqlite3.connect('sistema_escola.db')
-    cursor = conexao.cursor
+    cursor = conexao.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXIXTS professores (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nome_professor TEXT NOT NULL)''')
 
-    #O PYTHON RECLAMA DE "INCORRECT NUMBER OF BINDINGS".
-    #ESTAMOS PASSANDO A VARIÁVEL, POR QUE OCORRE O ERRO?
+    nome_professor = input("\nDigite o nome do profesor: ")
+    conexao.commit()
+
     cursor.execute("SELECT nome FROM professores WHERE id = ?", (id_prof,))
     resultado = cursor.fetchone()
-    print(resultado)
+
+    if resultado:
+        print("Professor encontrado:" resultado)
+    else:
+        print("Professor não encontrado!")
+
     conexao.close()
-    #É OBRIGATÓRIO COLOCAR A VÍRGULA DEPOIS DO ELEMENTO
+
+buscar_professor(1)

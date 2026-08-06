@@ -7,8 +7,7 @@ def inicializar_banco():
     cursor.execute('''
                 CREATE TABLE IF NOT EXISTS escolas (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT NOT NULL)
-                ''')
+                nome TEXT NOT NULL)''')
 
     cursor.execute('''
                 CREATE TABLE IF NOT EXISTS series (
@@ -20,8 +19,6 @@ def inicializar_banco():
     
     conexao.commit()
     conexao.close()
-
     print("Banco criado com sucesso!")
-
 
 inicializar_banco()
