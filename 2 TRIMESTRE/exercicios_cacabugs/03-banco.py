@@ -7,7 +7,7 @@ def criar_tabelas():
     cursor.execute('''
                 CREATE TABLE IF NOT EXISTS escolas(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT NOT NULL)''')
+                nome_escola TEXT NOT NULL)''')
     
     cursor.execute('''
                 CREATE TABLE IF NOT EXISTS series(

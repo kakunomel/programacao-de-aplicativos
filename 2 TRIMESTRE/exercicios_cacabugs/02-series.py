@@ -5,14 +5,16 @@ def cadastrar_serie(nome_serie, id_escola):
     cursor = conexao.cursor()
 
     try:
+        nome_serie = input("Digite a série: ")
+
         cursor.execute("INSERT INTO series (nome_serie, id_escola) VALUES (?, ?)",
         (nome_serie, id_escola))
 
         conexao.commit()
-        print("Série cadastrada com sucesso!")
+        print("\nSérie cadastrada com sucesso!\n")
 
     except sqlite3.IntegrityError:
-        print("Erro: Escola inexistente!")
+        print("\nErro: Escola inexistente!\n")
         
     finally:
         conexao.close()

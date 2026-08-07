@@ -4,16 +4,14 @@ def listar_alunos_e_turmas():
     conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
 
-    #O RELATÓRIO RODA, MAS REPETE OS DADOS ERRONEAMENTE EM FORMATO DE MATRIZ CRUZADA,
-    #PORQUE FALTA DEFINIR A REGRA DE COLAGEM (VÍNCULO). CONSERTE O COMANDO SQL:
     cursor.execute('''
-        SELECT alunos.nome, turmas.nome_turma
+        SELECT alunos.nome_aluno, series.nome_serie
         FROM alunos 
-        INTER JOIN turmas
-        ON alunos.id_turma = turmas.id ''')
+        INNER JOIN series
+        ON alunos.id_serie = series.id ''')
 
     for linha in cursor.fetchall():
-        print(f"Aluno{linha[0]} | Turma: {linha[1]}")
+        print(f"Aluno: {linha[0]} | Turma: {linha[1]}")
     conexao.close()
 
-    #FALTAVA O 'ON' PARA LIGAR OS ALUNOS E AS TURMAS CORRETAMENTE
+listar_alunos_e_turmas()

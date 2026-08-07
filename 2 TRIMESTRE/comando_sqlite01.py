@@ -1,6 +1,7 @@
 import sqlite3
-conexao = sqlite3.connect('escola.demonstracao.db')
+conexao = sqlite3.connect('sistema_escola.db')
 cursor = conexao.cursor()
 
-cursor.execute('''DROP TABLE alunos''')
+cursor.execute('''DROP TABLE professores
+''')
 conexao.commit()

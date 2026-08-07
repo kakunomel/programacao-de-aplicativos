@@ -1,13 +1,13 @@
 import sqlite3
 
-#O ALUNO CRIOU A CONEXÃO FORA DAS FUNÇÕES PARA "FACILITAR".
-#POR QUE ISSO QUEBRA O SISTEMA QUANDO USAMOS MÚLTIPLOS ARQUIVOS(MÓDULOS)?
-def inserir_escola(nome):
+def inserir_escola(nome_escola):
     conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
 
-    cursor.execute("INSERT INTO escolas (nomes) VALUES (?)", (nome,))
+    cursor.execute("INSERT INTO escolas (nome_escola) VALUES (?)", (nome_escola,))
     conexao.commit()
+    print("Escola cadastrada com sucesso!\n")
     conexao.close()
-    
-#A CONEXÃO DEVE SER CRIADA DENTRO DO 'DEF' PARA EVITAR PROBLEMAS EM PROJETOS COM VÁRIOS MÓDULOS
+
+nome_escola = input("\nDigite o nome da escola: ")
+inserir_escola(nome_escola)

@@ -8,8 +8,8 @@ def tabela_alunos():
                 CREATE TABLE IF NOT EXISTS alunos(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome_aluno TEXT NOT NULL,
-                id_turma INTEGER,
-                FOREIGN KEY (id_turma) REFERENCES series (id))
+                id_serie INTEGER,
+                FOREIGN KEY (id_serie) REFERENCES series (id))
                 ''')
     conexao.commit()
     conexao.close()
@@ -21,10 +21,10 @@ def vincular_aluno_turma():
     nome_aluno = input("Nome do aluno: ")
 
     try:
-        id_turma = int(input("Digite o ID da turma:"))
+        id_serie = int(input("Digite o ID da serie:"))
         conexao = sqlite3.connect('sistema_escola.db')
         cursor = conexao.cursor()
-        cursor.execute("INSERT INTO alunos (nome_aluno, id_turma) VALUES (?, ?)", (nome_aluno, id_turma))
+        cursor.execute("INSERT INTO alunos (nome_aluno, id_serie) VALUES (?, ?)", (nome_aluno, id_serie))
         conexao.commit()
         print("Aluno cadastrado com sucesso!\n")
 

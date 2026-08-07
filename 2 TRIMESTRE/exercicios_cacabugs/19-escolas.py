@@ -1,16 +1,24 @@
 import sqlite3
 
 def cadastrar_escola_manual():
-    #O ALUNO RESOLVEU GERAR O ID POR CONTA PRÓPRIA
     id_escola = int(input("Digite o ID para a nova escola: "))
-    nome = input("Nome da escola: ")
+    nome_escola = input("Nome da escola: ")
 
     conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
 
-    #SE RODAR DUAS VEZES COM O ID 1, O PROGRAMA FECHA ABRUPTAMENTE (CRASH).
-    #APLIQUE A BLINDAGEM PROTETORA NECESSÁRIA:
-    cursor.execute("INSERT INTO escolas (id, nome) VALUES (?,?)", (id_escola, nome))
+    try:
+        cursor.execute("INSERT INTO escolas (id, nome_escola) VALUES (?,?)", (id_escola, nome_escola))
+        conexao.commit()
+        print("Escola cadastrada com sucesso!")
 
-    conexao.commit()
-    conexao.close()
+    except sqlite3.IntegrityError:
+        print("Erro: este ID de escola já está cadastrado!")
+
+    except sqlite3.Error as e:
+        print("Erro no banco de dados:", e)
+
+    finally:
+        conexao.close()
+
+cadastrar_escola_manual()
