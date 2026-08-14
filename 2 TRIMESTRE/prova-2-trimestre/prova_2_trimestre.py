@@ -245,10 +245,10 @@ def excluir_teatro():
 def menu():
     print("\n----- SISTEMA DE COMPANHIA DE TEATRO -----")
     while True:
-        print("\n1 - CADASTRAR COMPANHIA")
-        print("2 - LISTAR COMPANHIAS")
-        print("3 - ATUALIZAR COMPANHIA")
-        print("4 - EXCLUIR COMPANHIA")
+        print("\n1 - CADASTRAR COOPERATIVA")
+        print("2 - LISTAR COOPERATIVAS")
+        print("3 - ATUALIZAR COOPERATIVA")
+        print("4 - EXCLUIR COOPERATIVA")
         print("\n5 - CADASTRAR TEATRO")
         print("6 - LISTAR TEATROS")
         print("7 - ATUALIZAR TEATRO")
