@@ -1,6 +1,8 @@
-def par(numero):
+def eh_par(numero):
     return numero % 2 == 0
 
-numero = int(input("Digite um número: "))
-assert par(numero) == True
-print("Passou no teste!")
+assert eh_par(4) == True, "Erro..."
+assert eh_par(5) == False, "Erro..."
+assert eh_par(0) == True, "Erro..."
+assert eh_par(-3) == False, "Erro..."
+print("Todos os testes passaram!")
