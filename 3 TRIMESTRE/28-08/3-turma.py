@@ -59,12 +59,11 @@ def atualizar_turma():
         listar_turma()
         id_turma = int(input("\nInforme o ID da turma que deseja alterar: "))
         nova_turma = input("Digite a nova turma: ")
-        id_escola = int(input("Digite a nova cidade: "))
 
-        cursor.execute( "UPDATE turmas SET novo_nome = ?, nova_cidade = ? WHERE id = ?",
-        (novo_nome, nova_cidade, id_turma))
+        cursor.execute( "UPDATE turmas SET novo_nome = ?, WHERE id = ?",
+        (novo_nome, id_turma))
         conexao.commit()
-        print("\nEscola atualizada com sucesso!")
+        print("\nTurma atualizada com sucesso!")
 
     except ValueError:
         print("\nDigite apenas números!")
@@ -77,19 +76,20 @@ def atualizar_turma():
 
 
 
-def excluir_escola():
+def excluir_turma():
     conexao = sqlite3.connect('gestao_escolar.db')
     conexao.execute("PRAGMA foreign_keys = ON")
     cursor = conexao.cursor()
 
-    print("\n----- EXCLUIR ESCOLA -----")
+    print("\n----- EXCLUIR TURMA -----")
 
     try:
-        id_escola = int(input("Digite o ID da escola que deseja excluir: "))
-        deletar = f"DELETE FROM escolas WHERE id = {id_escola}"
+        listar_turma()
+        id_turma = int(input("Digite o ID da turma que deseja excluir: "))
+        deletar = f"DELETE FROM turmas WHERE id = {id_turma}"
         cursor.execute(deletar)
         conexao.commit()
-        print("Escola excluida com sucesso!")
+        print("Turma excluida com sucesso!")
 
     except ValueError:
         print("\nDigite apenas números!")
