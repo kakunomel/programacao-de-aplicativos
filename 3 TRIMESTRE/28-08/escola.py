@@ -52,9 +52,9 @@ def listar_escolas():
 
 
 def atualizar_escola():
-        conexao = sqlite3.connect('gestao_escolar.db')
-        conexao.execute("PRAGMA foreign_keys = ON")
-        cursor = conexao.cursor()
+    conexao = sqlite3.connect('gestao_escolar.db')
+    conexao.execute("PRAGMA foreign_keys = ON")
+    cursor = conexao.cursor()
 
     print("\n----- ATUALIZAR ESCOLA -----")
 
@@ -64,7 +64,7 @@ def atualizar_escola():
         novo_nome = input("Digite o novo nome: ")
         nova_cidade = input("Digite a nova cidade: ")
 
-        cursor.execute( "UPDATE turmas SET novo_nome = ?, nova_cidade = ? WHERE id = ?",
+        cursor.execute( "UPDATE turmas SET nome_escola = ?, nome_cidade = ? WHERE id = ?",
         (novo_nome, nova_cidade, id_escola))
         conexao.commit()
         print("\nEscola atualizada com sucesso!")
@@ -81,6 +81,7 @@ def atualizar_escola():
 
 
 def excluir_escola():
+    listar_escolas()
     conexao = sqlite3.connect('gestao_escolar.db')
     conexao.execute("PRAGMA foreign_keys = ON")
     cursor = conexao.cursor()

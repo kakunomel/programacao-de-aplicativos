@@ -12,7 +12,7 @@ def cadastrar_aluno():
         idade_aluno = int(input("Digite sua idade: "))
         id_turma = input("Digite o ID da sua turma: ")
 
-        cursor.execute("INSERT INTO alunos (nome_aluno, idade_aluno, id_turma) VALUES (?,?)",
+        cursor.execute("INSERT INTO alunos (nome_aluno, idade_aluno, id_turma) VALUES (?,?,?)",
         (nome_aluno, idade_aluno, id_turma))
         
         conexao.commit ()
@@ -39,8 +39,8 @@ def listar_aluno():
         for l in listar:
             print(f"\nID: {l[0]}")
             print(f"Aluno: {l[1]}")
-            print(f"Idade: ")
-            print(f"ID Turma: {l[2]}")
+            print(f"Idade: {l[2]}")
+            print(f"ID Turma: {l[3]}")
 
     except sqlite3.Error as e:
         print("\nErro...", e)
@@ -51,9 +51,9 @@ def listar_aluno():
 
 
 def atualizar_aluno():
-        conexao = sqlite3.connect('gestao_escolar.db')
-        conexao.execute("PRAGMA foreign_keys = ON")
-        cursor = conexao.cursor()
+    conexao = sqlite3.connect('gestao_escolar.db')
+    conexao.execute("PRAGMA foreign_keys = ON")
+    cursor = conexao.cursor()
 
     print("\n----- ATUALIZAR ALUNO -----")
 
@@ -63,10 +63,10 @@ def atualizar_aluno():
         novo_nome = input("Digite o novo nome: ")
         nova_idade = int(input("Digite a nova idade: "))
 
-        cursor.execute( "UPDATE alunos SET novo_nome = ?, nova_cidade = ? WHERE id = ?",
+        cursor.execute( "UPDATE alunos SET nome_aluno = ?, idade_aluno = ? WHERE id = ?",
         (novo_nome, nova_idade, id_aluno))
         conexao.commit()
-        print("\nAluno atualizada com sucesso!")
+        print("\nAluno atualizado com sucesso!")
 
     except ValueError:
         print("\nDigite apenas números!")
@@ -79,7 +79,7 @@ def atualizar_aluno():
 
 
 
-def excluir_escola():
+def excluir_aluno():
     conexao = sqlite3.connect('gestao_escolar.db')
     conexao.execute("PRAGMA foreign_keys = ON")
     cursor = conexao.cursor()
@@ -92,7 +92,7 @@ def excluir_escola():
         deletar = f"DELETE FROM alunos WHERE id = {id_aluno}"
         cursor.execute(deletar)
         conexao.commit()
-        print("Aluno excluida com sucesso!")
+        print("Aluno excluido com sucesso!")
 
     except ValueError:
         print("\nDigite apenas números!")

@@ -1,6 +1,11 @@
+from banco import tabela_escolas, tabela_turmas, tabela_alunos
+from escola import cadastrar_escolas, listar_escolas, atualizar_escola, excluir_escola
+from turma import cadastrar_turma, listar_turma, atualizar_turma, excluir_turma
+from aluno import cadastrar_aluno, listar_aluno, atualizar_aluno, excluir_aluno
+
 def menu():
-    print("\n----- SISTEMA DE GESTÃO ESCOLAR -----")
     while True:
+        print("\n----- SISTEMA DE GESTÃO ESCOLAR -----")
         print("\n1 - ESCOLA")
         print("2 - TURMA")
         print("3 - ALUNOS")
@@ -8,13 +13,13 @@ def menu():
         opcao = input("\nDigite o que deseja: ")
 
         if opcao == "1":
-            escola()
+            crud_escola()
 
         elif opcao == "2":
-            turma()
+            crud_turma()
 
         elif opcao == "3":
-            aluno()
+            crud_aluno()
 
         elif opcao == "4":
             print("\nSaindo do programa...\n")
@@ -22,11 +27,11 @@ def menu():
 
 
 
-    def escola():
-        print("\n----- CRUD ESCOLA -----")
-        while True:
+def crud_escola():
+    print("\n----- CRUD ESCOLA -----")
+    while True:
         print("\n1 - CADASTRAR ESCOLA")
-        print("2 - LISTAR ESCOLA")
+        print("2 - LISTAR ESCOLAS")
         print("3 - ATUALIZAR ESCOLA")
         print("4 - EXCLUIR ESCOLA")
         print("5 - SAIR")
@@ -49,11 +54,11 @@ def menu():
             break
 
 
-    def turma():
-        print("\n----- CRUD TURMA -----")
-        while True:
+def crud_turma():
+    print("\n----- CRUD TURMA -----")
+    while True:
         print("\n1 - CADASTRAR TURMA")
-        print("2 - LISTAR TURMA")
+        print("2 - LISTAR TURMAS")
         print("3 - ATUALIZAR TURMA")
         print("4 - EXCLUIR TURMA")
         print("5 - SAIR")
@@ -76,11 +81,11 @@ def menu():
             break
 
 
-    def aluno():
-        print("\n----- CRUD ALUNO -----")
-        while True:
+def crud_aluno():
+    print("\n----- CRUD ALUNO -----")
+    while True:
         print("\n1 - CADASTRAR ALUNO")
-        print("2 - LISTAR ALUNO")
+        print("2 - LISTAR ALUNOS")
         print("3 - ATUALIZAR ALUNO")
         print("4 - EXCLUIR ALUNO")
         print("5 - SAIR")
@@ -101,3 +106,5 @@ def menu():
         elif opcao == "5":
             print("\nSaindo do programa...\n")
             break
+
+menu()

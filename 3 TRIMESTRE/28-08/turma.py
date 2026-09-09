@@ -49,9 +49,9 @@ def listar_turma():
 
 
 def atualizar_turma():
-        conexao = sqlite3.connect('gestao_escolar.db')
-        conexao.execute("PRAGMA foreign_keys = ON")
-        cursor = conexao.cursor()
+    conexao = sqlite3.connect('gestao_escolar.db')
+    conexao.execute("PRAGMA foreign_keys = ON")
+    cursor = conexao.cursor()
 
     print("\n----- ATUALIZAR TURMA -----")
 
@@ -60,8 +60,8 @@ def atualizar_turma():
         id_turma = int(input("\nInforme o ID da turma que deseja alterar: "))
         nova_turma = input("Digite a nova turma: ")
 
-        cursor.execute( "UPDATE turmas SET novo_nome = ?, WHERE id = ?",
-        (novo_nome, id_turma))
+        cursor.execute( "UPDATE turmas SET nome_turma = ? WHERE id = ?",
+        (nova_turma, id_turma))
         conexao.commit()
         print("\nTurma atualizada com sucesso!")
 
@@ -69,7 +69,7 @@ def atualizar_turma():
         print("\nDigite apenas números!")
     
     except sqlite3.Error as e:
-        print("\nErro...", e)
+        print("\nErro..." , e)
 
     finally:
         conexao.close()
