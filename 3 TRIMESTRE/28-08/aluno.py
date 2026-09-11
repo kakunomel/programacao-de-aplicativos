@@ -14,16 +14,14 @@ def cadastrar_aluno():
 
         cursor.execute("INSERT INTO alunos (nome_aluno, idade_aluno, id_turma) VALUES (?,?,?)",
         (nome_aluno, idade_aluno, id_turma))
-        
-        conexao.commit ()
+        conexao.commit()
         print("\nAluno cadastrado com sucesso!")
 
-    except sqlite3.Error as erro:
-        print("\nErro..." , e)
+    except sqlite3.Error as e:
+        print("\nErro...", e)
 
     finally:
         conexao.close()
-
 
 
 def listar_aluno():
@@ -32,7 +30,7 @@ def listar_aluno():
     cursor = conexao.cursor()
 
     try:
-        cursor.execute("SELECT * FROM alunos")
+        cursor.execute("SELECT * FROM alunos ORDER BY nome_aluno ASC") #ORDER BY
         listar = cursor.fetchall()
 
         print("\n----- ALUNOS CADASTRADOS -----")
@@ -49,7 +47,6 @@ def listar_aluno():
         conexao.close()
 
 
-
 def atualizar_aluno():
     conexao = sqlite3.connect('gestao_escolar.db')
     conexao.execute("PRAGMA foreign_keys = ON")
@@ -63,7 +60,7 @@ def atualizar_aluno():
         novo_nome = input("Digite o novo nome: ")
         nova_idade = int(input("Digite a nova idade: "))
 
-        cursor.execute( "UPDATE alunos SET nome_aluno = ?, idade_aluno = ? WHERE id = ?",
+        cursor.execute("UPDATE alunos SET nome_aluno = ?, idade_aluno = ? WHERE id = ?",
         (novo_nome, nova_idade, id_aluno))
         conexao.commit()
         print("\nAluno atualizado com sucesso!")
@@ -78,7 +75,6 @@ def atualizar_aluno():
         conexao.close()
 
 
-
 def excluir_aluno():
     conexao = sqlite3.connect('gestao_escolar.db')
     conexao.execute("PRAGMA foreign_keys = ON")
@@ -89,10 +85,9 @@ def excluir_aluno():
     try:
         listar_aluno()
         id_aluno = int(input("Digite o ID do aluno que deseja excluir: "))
-        deletar = f"DELETE FROM alunos WHERE id = {id_aluno}"
-        cursor.execute(deletar)
+        cursor.execute("DELETE FROM alunos WHERE id = ?", (id_aluno,))
         conexao.commit()
-        print("Aluno excluido com sucesso!")
+        print("Aluno excluído com sucesso!")
 
     except ValueError:
         print("\nDigite apenas números!")

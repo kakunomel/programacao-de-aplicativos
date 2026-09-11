@@ -22,7 +22,7 @@ def menu():
             crud_aluno()
 
         elif opcao == "4":
-            print("\nSaindo do programa...\n")
+            print("\nEncerrando o programa...\n")
             break
 
 
@@ -50,7 +50,7 @@ def crud_escola():
             excluir_escola()
 
         elif opcao == "5":
-            print("\nSaindo do programa...\n")
+            print("\nSaindo...\n")
             break
 
 
@@ -77,7 +77,7 @@ def crud_turma():
             excluir_turma()
 
         elif opcao == "5":
-            print("\nSaindo do programa...\n")
+            print("\nSaindo...\n")
             break
 
 
@@ -104,7 +104,7 @@ def crud_aluno():
             excluir_aluno()
 
         elif opcao == "5":
-            print("\nSaindo do programa...\n")
+            print("\nSaindo...\n")
             break
 
 menu()
